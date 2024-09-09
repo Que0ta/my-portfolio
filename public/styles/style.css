@@ -1,5 +1,6 @@
 :root{
     --minHeaderPad: 1.45em;
+    --gradyBG: linear-gradient(359.57deg, #015958 -35.5%, #0FC2C0 126.97%);
 }
 
 *{
@@ -8,13 +9,13 @@
 }
 
 body{
-    background: linear-gradient(359.57deg, #015958 -35.5%, #0FC2C0 126.97%);
+    background: var(--gradyBG);
     width: 100%;
     height: 100vh;
 }
 
 header{
-    height: clamp(100px, 50px, 200px);
+    height: clamp(100px, 50px, 300px);
     padding: clamp(0.5em, 10%, 1.5em);
 
 }
@@ -35,7 +36,6 @@ header{
     background: rgba(2, 53, 53, 0.69);
     border-radius: 40px;
     padding: clamp(var(--minHeaderPad), 2vw, 3em);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,6 +45,11 @@ header{
 
 
 .pages{
+    display: flex;
+    gap: clamp(2em, 2vw, 4em);
+}
+
+.overlay{
     height: clamp(20px, 30px, 50px);
     float: right;
     background: rgba(2, 53, 53, 0.69);
@@ -56,7 +61,7 @@ header{
     gap: clamp(30px, 40px, 60px);
 }
 
-.pages a{
+.overlay .pages a, .dropdown li a{
     text-decoration: none;
     color: #CFFFFE;
     font-family: 'Agbalumo';
@@ -73,32 +78,58 @@ header{
     padding: clamp(1.25em, 15px, 3em);
 }
 
+/* dropdown show/hide */
+.dropdown{
+    position: absolute;
+    top: 7rem;
+    right: 2em;
+    width: clamp(220px, 15vw,300px);
+    max-height: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: max-height .2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em;
+}
+
+.dropdown li a{
+    text-decoration: none;
+    font-size: clamp(10px, 1vw + 1rem, 20px);
+}
+
+.dropdown.open{
+    max-height: clamp(350px, 45vh, 600px);
+}
 
 @media (max-width: 600px) {
-    .pages {
+    .dropdown{
+        width: unset;
+        left: 2em;
+    }
+
+    .overlay {
         display: none; /* Hide the original pages block */
     }
 
     .pages-icon {
         display: block; /* Show the icon */
+
+    }
+}
+
+@media (min-width: 600px) {
+    .dropdown{
+        display: none;
     }
 
-    .pages-menu {
-        display: none; /* Hide the menu by default */
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: rgba(2, 53, 53, 0.69);
-        border-radius: 10px;
-        padding: 1em;
-        flex-direction: column;
-        gap: 1em;
-        width: max-content;
-    }
-
-    .pages-menu.show {
-        display: flex; /* Show the menu when 'show' class is added */
-    }
 }
 
 /* Adding bg wave */
@@ -151,6 +182,6 @@ header::before {
 
 @media (max-width: 600px) {
     header {
-        height: clamp(150px, 25vh, 250px); /* Maximum height for very small screens */
+        height: clamp(150px, 37vh, 250px); /* Maximum height for very small screens */
     }
 }
