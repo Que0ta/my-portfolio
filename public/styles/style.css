@@ -2,7 +2,7 @@
     --minHeaderPad: 1.45em;
     --gradyBG: linear-gradient(359.57deg, #015958 -35.5%, #0FC2C0 126.97%);
     --fontMin: 24px;
-    --fontMax: 42px;
+    --fontMax: 46px;
     --fontLeadMin: 36px;
     --fontLeadMax: 54px;
 }
@@ -196,6 +196,7 @@ header::before {
 
 
 main{
+    position: relative;
     padding: clamp(3.7em, 10vw, 3.9em);
     padding-top: 0;
 }
@@ -224,6 +225,7 @@ main{
 
 
 .containerito {
+    position: relative;
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 0.25fr 1fr;  /* 1st column 200px, 2nd column flexible, 3rd column 100px */
@@ -265,7 +267,7 @@ main{
     border-radius: 40px;
     box-shadow: inset 0px 3px 12.2px rgba(0, 0, 0, 0.76);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    width: min(300px, 18rem);
+    width: min(320px, 22em);
     text-align: center;
 }
 
@@ -274,6 +276,37 @@ main{
     width: auto;
 }
 /* try */
+/* .text_lead{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+@media (max-width: 1500px){
+    .text_lead{
+        font-size: 2.25em;
+    }
+}
+@media (max-width: 1300px){
+    .text_lead{
+        font-size: 1.7em;
+    }
+    
+    .lead{
+        font-size: 1.35em;
+    }
+    
+    .containerito{
+        grid-template-columns: 1fr 0fr 1fr;  /* 1st column 200px, 2nd column flexible, 3rd column 100px */
+        grid-template-rows: 0.25fr 0fr 0.1fr;      /* Creates 2 equal-height rows */
+    }
+}
+
+@media (max-width: 1030px){
+    .text_lead{
+        font-size: 1.3em;
+    }
+}
 
 @media (max-width: 900px) {
     .lead{
@@ -316,9 +349,80 @@ main{
     }
 }
 
-.projbtn{
-    width: 100px;
-}
+
 .arrow {
     animation: colorTransition 4.5s linear infinite; /* Adjust duration and timing as needed */
+}
+.node {
+    position: absolute;
+    z-index: 0;
+    top: -21vh; /* Use vh for vertical positioning */
+    left: 3vw; /* Use vw for horizontal positioning */
+    width: clamp(350px, 15em, 450px);
+}
+
+.react {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: clamp(200px, 7em, 300px);
+}
+
+.cssy {
+    position: absolute;
+    top: -10vh;
+    right: 0;
+    width: clamp(100px, 7em, 190px);
+}
+
+.htmly {
+    position: absolute;
+    top: 85%;
+    right: 70%;
+    transform: translate(-50%, -50%);
+    width: clamp(140px, 9em, 290px);
+}
+
+.js {
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    transform: translate(-50%, -50%);
+    width: clamp(170px, 7em, 240px);
+}
+
+@media (max-width: 900px) {
+    .node {
+        top: -20vh;
+        left: 5vw;
+        width: clamp(350px, 15em, 450px);
+    }
+}
+
+@media (max-width: 700px) {
+    .node {
+        top: -13vh;
+        left: -10vw;
+        width: clamp(170px, 19em, 280px);
+    }
+    .cssy {
+        top: 13vh;
+        right: 12vw;
+        width: clamp(50px, 10em, 100px);
+    }
+
+    .htmly{
+        top: -3vh;
+        right: -7vw;
+    }
+
+    .js{
+        top: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .react{
+        width: clamp(150px, 10em, 200px);;
+    }
 }
