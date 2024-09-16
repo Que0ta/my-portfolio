@@ -242,6 +242,7 @@ main{
 }
 
 .item_img{
+    position: relative;
     z-index: 2;
     grid-column: 3;
     grid-row: 1/ span 2;
@@ -272,8 +273,13 @@ main{
 }
 
 .lead_img{
-    height: 700px;
+    position: absolute;
+    height: 710px;
     width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    z-index: 0;
 }
 /* try */
 /* .text_lead{
@@ -356,9 +362,9 @@ main{
 .node {
     position: absolute;
     z-index: 0;
-    top: -21vh; /* Use vh for vertical positioning */
+    top: -22vh; /* Use vh for vertical positioning */
     left: 3vw; /* Use vw for horizontal positioning */
-    width: clamp(350px, 15em, 450px);
+    width: clamp(350px, 25em, 500px);
 }
 
 .react {
@@ -401,13 +407,13 @@ main{
 
 @media (max-width: 700px) {
     .node {
-        top: -13vh;
-        left: -10vw;
+        top: -18vh;
+        left: -12vw;
         width: clamp(170px, 19em, 280px);
     }
     .cssy {
-        top: 13vh;
-        right: 12vw;
+        top: 19vh;
+        right: 5vw;
         width: clamp(50px, 10em, 100px);
     }
 
@@ -424,5 +430,54 @@ main{
 
     .react{
         width: clamp(150px, 10em, 200px);;
+    }
+}
+
+
+/* Adding bg wave */
+footer {
+    position: relative;
+    z-index: 2;
+    height: clamp(490px, 15vh, 650px); /* Ensure height is adaptable */
+    padding: clamp(0.75em, 10%, 1.5em); /* Adjust padding if needed */
+    overflow: hidden; /* Hide any overflow from pseudo-element */
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/footer.png') no-repeat right bottom; /* Position image at the bottom */
+    background-position: center;
+    transform: scaleX(-1);
+    background-size: cover; /* Ensure the image covers the area without stretching */
+    z-index: -1; /* Ensure the image is behind the content */
+    filter: blur(7px);
+}
+
+@media (max-width: 900px) {
+    .lead_img{
+        height: 500px;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        z-index: 0;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .lead_img{
+        height: 420px;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        z-index: 0;
+
     }
 }
