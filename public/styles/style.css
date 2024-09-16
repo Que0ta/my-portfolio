@@ -1,6 +1,10 @@
 :root{
     --minHeaderPad: 1.45em;
     --gradyBG: linear-gradient(359.57deg, #015958 -35.5%, #0FC2C0 126.97%);
+    --fontMin: 24px;
+    --fontMax: 42px;
+    --fontLeadMin: 36px;
+    --fontLeadMax: 54px;
 }
 
 *{
@@ -11,7 +15,7 @@
 body{
     background: var(--gradyBG);
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 header{
@@ -61,13 +65,13 @@ header{
     gap: clamp(30px, 40px, 60px);
 }
 
-.overlay .pages a, .dropdown li a{
+.overlay .pages a, .dropdown li a , .text_lead, .lead, .item_text a{
     text-decoration: none;
     color: #CFFFFE;
     font-family: 'Agbalumo';
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(14px, 2vw + 1rem, 24px);
+    font-size: clamp(var(--fontMin), 2vw + 1rem, var(--fontMax));
 }
 
 .pages-icon {
@@ -149,6 +153,7 @@ header::before {
     width: 100%;
     height: 100%;
     background: url('/images/header.png') no-repeat right bottom; /* Position image at the bottom */
+    background-position: left;
     background-size: cover; /* Ensure the image covers the area without stretching */
     z-index: -1; /* Ensure the image is behind the content */
 }
@@ -163,9 +168,9 @@ header::before {
     padding-bottom: clamp(1.5em, 5%, 2.5em); /* Adjust padding if needed */
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1500px) {
     header {
-        height: clamp(200px, 30vh, 600px); /* Adjust height for medium screens */
+        height: clamp(350px, 22vh, 500px); /* Adjust height for medium screens */
     }
 }
 
@@ -178,10 +183,142 @@ header::before {
     header::before{
         background-position: left;
     }
+
+
 }
 
 @media (max-width: 600px) {
     header {
         height: clamp(150px, 37vh, 250px); /* Maximum height for very small screens */
     }
+}
+
+
+
+main{
+    padding: clamp(3.7em, 10vw, 3.9em);
+    padding-top: 0;
+}
+
+.lead{
+    color: #023535;
+    font-size: clamp(var(--fontLeadMin), 3vw + 1rem, var(--fontLeadMax));
+}
+
+/* .lead_info {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    justify-content: left;
+}
+
+.text_lead{
+    float: left;
+}
+
+.lead_img{
+    height: 350px;
+    z-index: 2;
+} */
+
+
+.containerito {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 0.25fr 1fr;  /* 1st column 200px, 2nd column flexible, 3rd column 100px */
+    grid-template-rows: 0.25fr 0.25fr 0.1fr;      /* Creates 2 equal-height rows */
+    /* gap: 10px;       */
+                           /* Space between grid items */
+}
+  
+.grid-item {
+    background-color: lightblue;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.item_img{
+    z-index: 2;
+    grid-column: 3;
+    grid-row: 1/ span 2;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.item_text{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item_text a {
+    text-decoration: none;
+    color: #023535;
+    background: linear-gradient(180deg, #0BD2F4 11%, #176688 131%);
+    border-radius: 40px;
+    box-shadow: inset 0px 3px 12.2px rgba(0, 0, 0, 0.76);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: min(300px, 18rem);
+    text-align: center;
+}
+
+.lead_img{
+    height: 700px;
+    width: auto;
+}
+/* try */
+
+@media (max-width: 900px) {
+    .lead{
+        font-size: 22px;
+    }
+
+    .text_lead{
+        font-size: 14px;
+    }
+
+    .containerito {
+        grid-template-columns: 0.5fr; /* Single column */
+        grid-template-rows: repeat(4, 0.75fr); /* Four equal-height rows */
+    }
+
+    .item_img {
+        grid-column: 1; /* Full width in single-column layout */
+        grid-row: 2 / span 3; /* Adjust as needed */
+    }
+
+    .item_text {
+        justify-content: center;
+        align-items: center;
+        grid-column: 1; /* Full width in single-column layout */
+        grid-row: 1; /* Adjust as needed */
+    }
+
+    .lead_img {
+        height: 350px; /* Adjust height for better responsiveness */
+        width: auto;
+    }
+}
+
+@keyframes colorTransition {
+    from {
+        color: #023535; /* Start color */
+    }
+    to {
+        color: #cfffd4; /* End color */
+    }
+}
+
+.projbtn{
+    width: 100px;
+}
+.arrow {
+    animation: colorTransition 4.5s linear infinite; /* Adjust duration and timing as needed */
 }
