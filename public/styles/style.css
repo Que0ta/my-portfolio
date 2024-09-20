@@ -25,7 +25,7 @@ header{
 }
 
 .logo img{
-    width: clamp(200px, 10vw, 600px);
+    width: clamp(120px, 12vw, 300px);
 }
 
 /* .upperSide{
@@ -141,7 +141,7 @@ header{
 header {
     position: relative;
     z-index: 1;
-    height: clamp(240px, 15vh, 500px); /* Ensure height is adaptable */
+    height: clamp(340px, 15vh, 500px); /* Ensure height is adaptable */
     padding: clamp(0.5em, 10%, 1.5em); /* Adjust padding if needed */
     overflow: hidden; /* Hide any overflow from pseudo-element */
 }
