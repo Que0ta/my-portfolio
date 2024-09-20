@@ -25,7 +25,7 @@ header{
 }
 
 .logo img{
-    width: clamp(120px, 12vw, 300px);
+    width: clamp(120px, 12vw, 200px);
 }
 
 /* .upperSide{
@@ -139,10 +139,9 @@ header{
 
 /* Adding bg wave */
 header {
-    width: 100%;
     position: relative;
     z-index: 1;
-    height: clamp(340px, 15vh, 500px); /* Ensure height is adaptable */
+    height: clamp(240px, 15vh, 500px); /* Ensure height is adaptable */
     padding: clamp(0.5em, 10%, 1.5em); /* Adjust padding if needed */
     overflow: hidden; /* Hide any overflow from pseudo-element */
 }
@@ -172,7 +171,6 @@ header::before {
 
 @media (min-width: 1500px) {
     header {
-        width: 100%;
         height: clamp(350px, 22vh, 500px); /* Adjust height for medium screens */
     }
 }
@@ -200,9 +198,7 @@ header::before {
 
 main{
     position: relative;
-    /* width: 100%; */
-    padding-left: 3em;
-    /* padding: clamp(3.7em, 10vw, 3.9em); */
+    padding: clamp(3.7em, 10vw, 3.9em);
     padding-top: 0;
 }
 
@@ -279,7 +275,7 @@ main{
 
 .lead_img{
     position: absolute;
-    height: 900px;
+    height: 710px;
     width: auto;
     top: 50%;
     left: 50%;
@@ -405,7 +401,7 @@ main{
 
 @media (max-width: 900px) {
     .node {
-        top: -20vh;
+        top: -15em;
         left: 5vw;
         width: clamp(350px, 15em, 450px);
     }
@@ -413,7 +409,7 @@ main{
 
 @media (max-width: 700px) {
     .node {
-        top: -18vh;
+        top: -12em;
         left: -12vw;
         width: clamp(170px, 19em, 280px);
     }
@@ -435,19 +431,38 @@ main{
     }
 
     .react{
-        width: clamp(150px, 10em, 200px);;
+        width: clamp(150px, 6em, 170px);;
     }
 }
 
+@media (max-width: 500px){
+    .htmly{
+        display: none;
+    }
+}
 
 /* Adding bg wave */
 footer {
     position: relative;
     z-index: 2;
-    width: 100%;
-    height: clamp(490px, 39vh, 650px); /* Ensure height is adaptable */
+    height: clamp(490px, 15vh, 650px); /* Ensure height is adaptable */
     padding: clamp(0.75em, 10%, 1.5em); /* Adjust padding if needed */
     overflow: hidden; /* Hide any overflow from pseudo-element */
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/foot_test.png') no-repeat right bottom; /* Position image at the bottom */
+    background-position: center;
+    transform: scaleX(-1);
+    background-size: cover; /* Ensure the image covers the area without stretching */
+    z-index: -1; /* Ensure the image is behind the content */
+    /* filter: blur(7px); */
 }
 
 @media (max-width: 900px) {
@@ -492,57 +507,8 @@ footer {
 
 /*  */
 /* Test ability to fix size above 2000+px */
-header::before {
-    content: "";
-    position: absolute;
-    top: -120px;
-    left: 0;
-    width: 100%;
-    height: 130%;
-    background: url('/images/header.png') no-repeat right bottom;
-    background-position: left;
-    background-size: cover;
-    z-index: -1;
-}
-
-/* Adjustments for very large screens */
-@media (min-width: 2000px) {
-    header::before {
-        top: -170px;
-        background-size: contain; /* Scale down to fit */
-        background-position: left center; /* Keep it positioned properly */
-    }
-}
-
-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/images/foot_test.png') no-repeat right bottom;
-    background-position: center;
-    /* transform: scaleX(-1); */
-    background-size: cover;
-    z-index: -1;
-}
-
-/* Adjustments for very large screens */
-@media (min-width: 2000px) {
-    footer::before {
-        background-size: contain; /* Scale down to fit */
-        background-position: center center; /* Adjust to fit properly */
-    }
-}
-
-/*  */
-/* / */
-
 
 footer{
-    width: 100%;
-    height: clamp(490px, 39vh, 650px);
     display: flex;
     justify-content: flex-end;
     align-items: center; 
