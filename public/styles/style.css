@@ -275,12 +275,19 @@ main{
 
 .lead_img{
     position: absolute;
-    height: 710px;
+    height: 800px;
     width: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -35%);
     z-index: 0;
+}
+
+@media (max-width: 1000px){
+    .lead_img{
+        height: 600px;
+        width: auto;
+    }
 }
 /* try */
 /* .text_lead{
@@ -506,8 +513,6 @@ footer::before {
 }
 
 /*  */
-/* Test ability to fix size above 2000+px */
-
 footer{
     display: flex;
     justify-content: flex-end;
