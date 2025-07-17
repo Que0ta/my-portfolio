@@ -629,3 +629,136 @@ footer {
     font-size: 14px;
   }
 }
+
+
+/* remaking the main page */
+.projbtn {
+  padding: 5px;
+}
+
+.hire {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .space {
+    display: none;
+  }
+
+  .containerito {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .lead_info {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text_lead {
+    text-align: center;
+    font-size: medium;
+  }
+
+  .js {
+    top: 21rem;
+    left: 3rem;
+  }
+
+  .react {
+    bottom: -130px;
+  }
+
+  .hire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5.9rem;
+
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact-form {
+    width: 70%;
+    max-width: 300px;
+  }
+
+  .lead_info {
+    padding-left: 0;
+  }
+
+  .lead {
+    font-size: 24px;
+  }
+}
+
+.hire .lead {
+  margin-bottom: 1rem;
+}
+/* form */
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+
+  font-family: "Agbalumo";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #e0f7f6;
+}
+
+.contact-form button {
+  background-color: #0fc2c0;
+  color: #015958;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00a5a2;
+}
