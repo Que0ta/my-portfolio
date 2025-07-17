@@ -1,5 +1,5 @@
 :root {
-  --minHeaderPad: 1.45em;
+  --minHeaderPad: 1.05em;
   --gradyBG: linear-gradient(359.57deg, #015958 -35.5%, #0fc2c0 126.97%);
   --fontMin: 24px;
   --fontMax: 46px;
@@ -25,7 +25,7 @@ body {
 } */
 
 .logo img {
-  width: clamp(120px, 12vw, 200px);
+  width: clamp(150px, 15vw, 230px);
 }
 
 /* .upperSide{
@@ -37,7 +37,7 @@ body {
 .logo {
   height: clamp(20px, 25px, 50px);
   width: clamp(100px, 17vw, 16em);
-  background: rgba(2, 53, 53, 0.69);
+  /* background: rgba(2, 53, 53, 0.69); */
   border-radius: 40px;
   padding: clamp(var(--minHeaderPad), 2vw, 3em);
   display: flex;
