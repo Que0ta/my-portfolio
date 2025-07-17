@@ -18,11 +18,11 @@ body{
     height: 100%;
 }
 
-header{
+/* header{
     height: clamp(100px, 50px, 300px);
     padding: clamp(0.5em, 10%, 1.5em);
 
-}
+} */
 
 .logo img{
     width: clamp(120px, 12vw, 200px);
@@ -171,7 +171,7 @@ header::before {
 
 @media (min-width: 1500px) {
     header {
-        height: clamp(350px, 22vh, 500px); /* Adjust height for medium screens */
+        height: clamp(300px, 20vh, 400px); /* Adjust height for medium screens */
     }
 }
 
