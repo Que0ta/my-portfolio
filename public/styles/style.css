@@ -693,6 +693,15 @@ footer {
   .lead {
     font-size: 24px;
   }
+
+  .icons a img{
+    width: 45px;
+    height: 45px;
+  }
+
+  .text_copy{
+    font-size: clamp(12px, 1em, 15px);
+  }
 }
 
 .hire .lead {
