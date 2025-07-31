@@ -284,10 +284,12 @@ main {
   .text_lead {
     font-size: 2.25em;
   }
-  main:has(.about) .lead {
+  main:has(.about) .lead,
+  main:has(.list-inside) .lead {
     font-size: 3.85em;
   }
-  main:has(.about) .text_lead {
+  main:has(.about) .text_lead,
+  main:has(.list-inside) .text_lead {
     font-size: 2.75em;
   }
 }
@@ -297,7 +299,8 @@ main {
     font-size: 1.7em;
   }
 
-  main:has(.about) .text_lead {
+  main:has(.about) .text_lead,
+  main:has(.list-inside) .text_lead {
     font-size: 2.45em;
   }
 
@@ -315,8 +318,13 @@ main {
   .text_lead {
     font-size: 1.3em;
   }
-  main:has(.about) .text_lead {
+  main:has(.about) .text_lead,
+  main:has(.list-inside) .text_lead {
     font-size: 2.15em;
+  }
+
+  main:has(.service-block) img {
+    height: 250px;
   }
 }
 
@@ -329,15 +337,25 @@ main {
     font-size: 22px;
   }
 
-  main:has(.about) .text_lead {
+  main:has(.service-block) img {
+    height: 200px;
+  }
+
+  .service-block{
+    padding: 10px 30px;
+  }
+
+  main:has(.about) .text_lead,
+  main:has(.list-inside) .text_lead {
     font-size: 1.65em;
   }
 
-  main:has(.about) .lead {
+  main:has(.about) .lead,
+  main:has(.list-inside) .lead {
     font-size: 2.85em;
   }
 
-  main:has(.about) .about{
+  main:has(.about) .about {
     height: 70vh;
   }
 
@@ -361,6 +379,10 @@ main {
   .lead_img {
     height: 350px; /* Adjust height for better responsiveness */
     width: auto;
+  }
+
+  .list-inside .text_lead{
+    text-align: left;
   }
 }
 
@@ -505,6 +527,22 @@ footer::before {
   .text_lead {
     font-size: 18px;
   }
+
+  .service-block img{
+    display: none;
+  }
+
+  main:has(.list-inside) .lead{
+    font-size: 2.15rem;
+  }
+  main:has(.list-inside) ul li{
+    font-size: 1.25rem;
+  }
+
+  .service-block{
+    padding: 10px 50px !important;
+  }
+
 
   .item_text {
     padding-left: 1.5em;
@@ -782,7 +820,7 @@ footer {
 
 /* About page */
 .about {
-  height: 80vh;
+  height: 110vh;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -808,4 +846,31 @@ main:has(.about) p {
 
 main:has(.about) {
   padding: 0;
+}
+
+/* Services */
+.service-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+
+  background: rgba(78, 162, 166, 0.6);
+  box-shadow: 2px 2px 17.8px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  backdrop-filter: blur(2.15px);
+  padding: 20px 80px;
+
+  box-shadow: 6px 6px 10px 2px rgba(35, 35, 35, 0.75);
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.list-inside ul li{
+  margin-left: 1em;
 }
