@@ -544,7 +544,7 @@ footer::before {
   }
 
   .service-block {
-    padding: 10px 30px !important;
+    padding: 10px 50px;
   }
 
   .item_text {
@@ -678,15 +678,15 @@ footer {
   #contact-form button {
     font-size: 14px;
   }
-  main:has(.list-inside) .lead {
+  /* main:has(.list-inside) .lead {
     font-size: 1.25rem;
   }
   main:has(.list-inside) ul li {
     font-size: 0.85rem;
   }
-  main:has(.service-block) img{
+  main:has(.service-block) img {
     height: 100px;
-  }
+  } */
 }
 
 /* remaking the main page */
@@ -885,4 +885,29 @@ main:has(.about) {
 
 .list-inside ul li {
   margin-left: 1em;
+}
+
+@media (max-width: 500px) {
+  main:has(.list-inside) ul li{
+    font-size: 0.8rem;
+  }
+
+  main:has(.service-block) img{
+    height: 100px;
+  }
+
+  main:has(.about) .lead {
+    font-size: 28px;
+  }
+  main:has(.about) .text_lead {
+    font-size: 18px;
+  }
+
+  .list-inside .lead{
+    font-size: 24px  !important;
+  }
+
+  .service-block{
+    padding: 10px 40px;
+  }
 }
