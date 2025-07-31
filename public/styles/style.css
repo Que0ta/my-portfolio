@@ -209,23 +209,6 @@ main {
   font-size: clamp(var(--fontLeadMin), 3vw + 1rem, var(--fontLeadMax));
 }
 
-/* .lead_info {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    gap: 50px;
-    justify-content: left;
-}
-
-.text_lead{
-    float: left;
-}
-
-.lead_img{
-    height: 350px;
-    z-index: 2;
-} */
-
 .containerito {
   position: relative;
   display: grid;
@@ -301,10 +284,21 @@ main {
   .text_lead {
     font-size: 2.25em;
   }
+  main:has(.about) .lead {
+    font-size: 3.85em;
+  }
+  main:has(.about) .text_lead {
+    font-size: 2.75em;
+  }
 }
+
 @media (max-width: 1300px) {
   .text_lead {
     font-size: 1.7em;
+  }
+
+  main:has(.about) .text_lead {
+    font-size: 2.45em;
   }
 
   .lead {
@@ -321,6 +315,9 @@ main {
   .text_lead {
     font-size: 1.3em;
   }
+  main:has(.about) .text_lead {
+    font-size: 2.15em;
+  }
 }
 
 @media (max-width: 900px) {
@@ -330,6 +327,18 @@ main {
 
   .text_lead {
     font-size: 22px;
+  }
+
+  main:has(.about) .text_lead {
+    font-size: 1.65em;
+  }
+
+  main:has(.about) .lead {
+    font-size: 2.85em;
+  }
+
+  main:has(.about) .about{
+    height: 70vh;
   }
 
   .containerito {
@@ -630,7 +639,6 @@ footer {
   }
 }
 
-
 /* remaking the main page */
 .projbtn {
   padding: 5px;
@@ -694,12 +702,12 @@ footer {
     font-size: 24px;
   }
 
-  .icons a img{
+  .icons a img {
     width: 45px;
     height: 45px;
   }
 
-  .text_copy{
+  .text_copy {
     font-size: clamp(12px, 1em, 15px);
   }
 }
@@ -770,4 +778,34 @@ footer {
 
 .contact-form button:hover {
   background-color: #00a5a2;
+}
+
+/* About page */
+.about {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+
+  background-image: url(/images/bg_hero.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about .text_lead p .lead {
+  margin-bottom: 30px;
+}
+
+main:has(.about) p {
+  width: 80%;
+  font-size: 3.35rem;
+}
+
+main:has(.about) {
+  padding: 0;
 }
