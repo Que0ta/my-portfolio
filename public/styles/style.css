@@ -888,11 +888,11 @@ main:has(.about) {
 }
 
 @media (max-width: 500px) {
-  main:has(.list-inside) ul li{
+  main:has(.list-inside) ul li {
     font-size: 0.8rem;
   }
 
-  main:has(.service-block) img{
+  main:has(.service-block) img {
     height: 100px;
   }
 
@@ -903,11 +903,12 @@ main:has(.about) {
     font-size: 18px;
   }
 
-  .list-inside .lead{
-    font-size: 24px  !important;
+  .list-inside .lead {
+    font-size: 24px !important;
   }
 
-  .service-block{
+  .service-block {
     padding: 10px 40px;
   }
 }
+
