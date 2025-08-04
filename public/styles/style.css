@@ -899,6 +899,7 @@ main:has(.about) {
   main:has(.about) .lead {
     font-size: 28px;
   }
+  
   main:has(.about) .text_lead {
     font-size: 18px;
   }
@@ -910,19 +911,24 @@ main:has(.about) {
   .service-block {
     padding: 10px 40px;
   }
+
+  .percento {
+    border-radius: 1px;
+    width: 60vw;
+    height: 5px;
+  }
 }
 
-.stats{
+.stats {
   margin: 40px 0 80px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
-
 }
 
-.skills{
+.skills {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -935,29 +941,29 @@ main:has(.about) {
   padding: 30px 25px;
   box-shadow: 6px 6px 10px 2px rgba(35, 35, 35, 0.75);
   gap: 30px;
-
 }
 
-.skill-item{
+.skill-item {
   display: flex;
   flex-direction: column;
 }
 
-.skill-item-text{
+.skill-item-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  color: #FFFFFF;
+
+  color: #ffffff;
   font-family: "Almarai", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: clamp(0.6rem, 1vw + 0.7rem, 2rem);
 }
 
-.percento{
+.percento {
   border-radius: 1px;
   width: 60vw;
+  height: 15px;
 }
 
 .percento::-webkit-progress-bar {
@@ -965,7 +971,7 @@ main:has(.about) {
   border-radius: 17px;
 }
 .percento::-webkit-progress-value {
-  background-color: #CFFFFE;
+  background-color: #cffffe;
   border-radius: 17px;
   /* style rules */
 }
