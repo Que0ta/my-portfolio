@@ -912,3 +912,64 @@ main:has(.about) {
   }
 }
 
+.stats{
+  margin: 40px 0 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.skills{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background: rgba(78, 162, 166, 0.6);
+  box-shadow: 2px 2px 17.8px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  backdrop-filter: blur(2.15px);
+  padding: 30px 25px;
+  box-shadow: 6px 6px 10px 2px rgba(35, 35, 35, 0.75);
+  gap: 30px;
+
+}
+
+.skill-item{
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-item-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  color: #FFFFFF;
+  font-family: "Almarai", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(0.6rem, 1vw + 0.7rem, 2rem);
+}
+
+.percento{
+  border-radius: 1px;
+  width: 60vw;
+}
+
+.percento::-webkit-progress-bar {
+  background-color: #023535;
+  border-radius: 17px;
+}
+.percento::-webkit-progress-value {
+  background-color: #CFFFFE;
+  border-radius: 17px;
+  /* style rules */
+}
+.percento::-moz-progress-bar {
+  background-color: #023535;
+  border-radius: 17px;
+}
