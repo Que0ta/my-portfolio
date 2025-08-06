@@ -1050,6 +1050,11 @@ main:has(.about) {
   font-weight: 400;
   font-style: normal;
   font-size: clamp(0.6rem, 1vw + 0.7rem, 2rem);
+  opacity: 1;
+  transition: opacity 1s linear;
+  @starting-style{
+    opacity: 0;
+  }
 }
 
 .message::before {
@@ -1071,7 +1076,7 @@ main:has(.about) {
   font-family: "Almarai", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: clamp(0.6rem, 1vw + 0.7rem, 2rem);
+  font-size: clamp(1.3rem, 1vw + 0.7rem, 2rem);
 }
 
 .message button {
@@ -1084,7 +1089,7 @@ main:has(.about) {
   font-family: "Almarai", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(0.6rem, 0.7vw + 0.5rem, 1.5rem);
+  font-size: clamp(0.7rem, 0.7vw + 0.5rem, 1.5rem);
 }
 
 .message button:first-child {
@@ -1101,5 +1106,30 @@ main:has(.about) {
   background-color: #378b3b;
 }
 .message .neutral:hover {
-  background-color: #dadada;
+  background-color: #ba3229;
+}
+
+@media (max-width: 900px) {
+  .message:not([hidden]){
+    bottom: auto;
+    right: auto;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 5px;
+    width: 300px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .message{
+    width: 250px;
+    height: 120px;
+  }
 }
