@@ -148,6 +148,52 @@ header {
   overflow: hidden; /* Hide any overflow from pseudo-element */
 }
 
+.waves {
+  position: absolute;
+  width: 130%;
+  height: 100%;
+  top: -60px;
+  left: -30px;
+  overflow: hidden;
+  z-index: -2; /* Put behind content */
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  opacity: 0.7;
+  animation: wave-animation 18s linear infinite alternate;
+}
+
+#wave1 {
+  background-image: url('/images/wavey.png');
+  z-index: 100;
+  animation-delay: 0s;
+  filter: hue-rotate(-40deg) saturate(135%) brightness(110%);
+}
+
+#wave2 {
+  background-image: url('/images/wavey.png');
+  z-index: 99;
+  opacity: 0.75;
+  animation-delay: -4s;
+  filter: hue-rotate(-40deg) saturate(120%) brightness(100%);
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
 header::before {
   content: "";
   position: absolute;
@@ -419,6 +465,7 @@ main {
   top: -7em;
   right: 0;
   width: clamp(100px, 7em, 190px);
+  z-index: 0;
 }
 
 .htmly {
@@ -760,6 +807,12 @@ footer {
   .text_copy {
     font-size: clamp(12px, 1em, 15px);
   }
+  .waves {
+    width: 110%;
+    height: 100%;
+    top: -20px;
+    left: -30px;
+}
 }
 
 .hire .lead {
