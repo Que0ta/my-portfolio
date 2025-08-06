@@ -166,7 +166,7 @@ header {
   background-repeat: repeat-x;
   background-position: bottom;
   opacity: 0.7;
-  animation: wave-animation 18s linear infinite alternate;
+  animation: wave-animation 12s linear infinite alternate;
 }
 
 #wave1 {
