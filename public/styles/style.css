@@ -349,9 +349,9 @@ main {
     font-size: 2.45em;
   }
 
-  .lead {
+  /* .lead {
     font-size: 1.35em;
-  }
+  } */
 
   .containerito {
     grid-template-columns: 1fr 0fr 1fr; /* 1st column 200px, 2nd column flexible, 3rd column 100px */
@@ -374,9 +374,9 @@ main {
 }
 
 @media (max-width: 900px) {
-  .lead {
+  /* .lead {
     font-size: 32px;
-  }
+  } */
 
   .text_lead {
     font-size: 22px;
@@ -1057,7 +1057,7 @@ main:has(.about) {
   }
 }
 
-.message::before {
+.message::before{
   content: "";
   position: absolute;
   top: 0; left: 0;
@@ -1133,3 +1133,17 @@ main:has(.about) {
     height: 120px;
   }
 }
+
+.lead{
+  display: block;
+  text-align: center;
+}
+
+.text_lead .lead{
+  display: inline-block;
+}
+
+.text_lead li{
+  font-size: clamp(var(--fontMin), 1vw + 1rem, var(--fontMax));
+}
+

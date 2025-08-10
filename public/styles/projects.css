@@ -1,0 +1,131 @@
+:root {
+  --textColor: #cffffe;
+  --borderR: 10px;
+}
+
+.someSPECIAL,
+.item-tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-tech {
+  justify-content: space-around;
+}
+
+.projects-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.project {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+
+  width: 400px;
+
+  background: rgba(84, 172, 176, 0.6);
+  box-shadow: 2px 2px 17.8px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  backdrop-filter: blur(1.15px);
+  box-shadow: 6px 6px 10px 2px rgba(35, 35, 35, 0.75);
+}
+
+.project img {
+  width: auto;
+  height: 200px;
+}
+
+.project .project-info,
+.project-buttony {
+  padding: 0.25rem 0.5rem;
+}
+
+.special_lead {
+  font-size: clamp(0.9rem, 0.5vw + 0.5rem, 2rem);
+  opacity: 0.75;
+  width: 65vw;
+  text-align: center;
+}
+
+.h3-head,
+.special_lead {
+  font-family: "Agbalumo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(var(--fontMin), 1vw + 1rem, var(--fontMax));
+  color: #023535;
+}
+
+.special_lead {
+  color: var(--textColor);
+}
+
+.description,
+.tech,
+.live-demo {
+  font-family: "Almarai", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--textColor);
+}
+
+.item-tech > * {
+  background-color: #055a5a;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 1300px) {
+  .h2-head {
+    font-size: clamp(0.85rem, 2.5rem, 3rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .special_lead {
+    font-size: 0.95rem;
+  }
+}
+
+.project-buttony,
+.live-demo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.live-demo {
+  margin-top: 5px;
+
+  text-decoration: none;
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+  border-radius: 5px;
+  padding: 7px;
+  transition: filter 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+  box-shadow: 20px 0 32px 8px rgba(59 130 246 / 0.2);
+}
+
+.live-demo:hover {
+  filter: brightness(0.95);
+  box-shadow: inset 0 1px 1px rgba(255 255 255 / 0.3),
+    inset 0 -1.5px 2px rgba(0 0 88 / 0.3), 0 0 66px 2px rgba(59 130 246 / 0.2),
+    0 0 44px 4px rgba(59 130 246 / 0.2);
+}
+
+.live-demo img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+}
