@@ -26,10 +26,8 @@ function getCookie(name) {
 
 window.addEventListener("DOMContentLoaded", () => {
   const saved = getCookie("animations");
-  console.log(saved);
-  if (saved === 'true') {
-    console.log(wavesAnimation.attributes);
-  } else if (saved === 'false') {
+  // console.log(saved);
+  if (saved === 'false') {
     wavesAnimation.setAttribute("hidden", "");
   } else if( saved === null ){
     animationWindow.removeAttribute("hidden");

@@ -1,6 +1,9 @@
 :root {
   --textColor: #cffffe;
   --borderR: 10px;
+  --smallHeadSize: 18px;
+  --smallTextSize: 0.85rem;
+
 }
 
 .someSPECIAL,
@@ -128,4 +131,45 @@
   width: 30px;
   height: 30px;
   filter: invert(1);
+}
+
+
+@media (max-width: 420px) {
+  .project{
+    width: 300px;
+  }
+
+  .project > img{
+    height: 150px;
+    width: auto;
+  }
+
+  .h3-head{
+    font-size: clamp(14px, 1vw + 2rem, calc(var(--smallHeadSize) + 0.2rem));
+  }
+
+  .description{
+    font-size: 0.75rem;
+  }
+
+  .tech{
+    font-size: calc(var(--smallTextSize) - 0.2rem);
+  }
+
+  .live-demo{
+    font-size: var(--smallTextSize);
+  }
+
+  .live-demo img{
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media (max-width: 420px) {
+  .special_lead{
+    font-size: 0.75rem;
+    width: 65vw;
+  }
+
 }
