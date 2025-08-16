@@ -1147,3 +1147,93 @@ main:has(.about) {
   font-size: clamp(var(--fontMin), 1vw + 1rem, var(--fontMax));
 }
 
+@keyframes lighUP {
+  from{
+    color: #ffffff;
+  }
+  to{
+    color: #023535;
+  }
+}
+
+.item_text .lead-btn{
+  border-radius: 20px;
+
+  background-color: #0e7c86; /* dark cyan */
+  color: #023535;            /* text color */
+  border: none;
+  padding: 0.6rem .8rem;
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+.item_text .lead-btn:hover {
+  background-color: #0c5f68; /* slightly darker */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px 4px rgba(0,0,0,0.15);
+  transition: all 0.5s ease;
+}
+
+/* Active state */
+.item_text .lead-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: all 0.5s ease;
+}
+
+
+/*  */
+/*  */
+.lead-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #0e7c86; /* dark cyan */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* The animated shine */
+.lead-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: rotate(45deg);
+  animation: shine 3s linear infinite;
+  z-index: 2;
+}
+
+/* Make the shine appear above the button content but below text */
+.lead-btn span {
+  position: relative;
+  z-index: 3;
+}
+
+/* Keyframes for the shine animation */
+@keyframes shine {
+  0% {
+    transform: rotate(45deg) translate(-200%, -200%);
+  }
+  100% {
+    transform: rotate(45deg) translate(200%, 200%);
+  }
+}
