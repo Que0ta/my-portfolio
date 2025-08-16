@@ -1,20 +1,15 @@
 <%- include("partials/header.ejs") %>
 
-        <div class="contact">
-          <h2 style="text-align: center; font-size: 24px; margin-bottom: 30px;"> Contact by email </h2>
-          <form id="contact-form" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
+        <div class="hire email-page">
+          <span class="lead">
+              <p> Let's Make It Happen</p>
+          </span>
+          <form class="contact-form">
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <textarea rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message</button>
           </form>
-              
         </div>
 
 <%- include("partials/footer.ejs") %>

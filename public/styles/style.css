@@ -54,10 +54,10 @@ body {
 }
 
 .overlay {
-  height: clamp(20px, 30px, 50px);
+  height: clamp(20px, 30px, 60px);
   float: right;
   background: rgba(2, 53, 53, 0.69);
-  border-radius: 40px;
+  border-radius: 25px;
   padding: clamp(var(--minHeaderPad), 2vw, 3em);
   display: flex;
   justify-content: center;
@@ -1173,7 +1173,7 @@ main:has(.about) {
 /* Hover effect */
 .item_text .lead-btn:hover {
   background-color: #0c5f68; /* slightly darker */
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   box-shadow: 0 6px 10px 4px rgba(0,0,0,0.15);
   transition: all 0.5s ease;
 }
@@ -1243,3 +1243,25 @@ main:has(.about) {
   }
 }
 
+.email-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1.9rem;
+  font-weight: 700;
+}
+
+.email-page .contact-form {
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  color: white;
+
+}
+
+@media (max-width: 450px) {
+  .email-page .lead{
+    font-size: 22px;
+  }
+}
