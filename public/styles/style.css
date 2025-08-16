@@ -1256,9 +1256,38 @@ main:has(.about) {
   padding: 2rem;
   width: 100%;
   max-width: 600px;
-  color: white;
+  color: #015958;
 
 }
+
+
+.email-page .contact-form input,
+.email-page .contact-form textarea,
+.email-page .contact-form button {
+  font-family: "Almarai", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(0.6rem, 0.5vw + 0.7rem, 2rem);
+
+  color: #e0f7f6;
+
+}
+
+.email-page .contact-form button:hover {
+  background-color: #48d8d6;
+}
+
+.email-page .contact-form button {
+  background-color: #0fc2c0;
+  color: #015958;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  margin-bottom: 0.25rem;
+}
+
 
 @media (max-width: 450px) {
   .email-page .lead{
