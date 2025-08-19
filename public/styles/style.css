@@ -1032,7 +1032,7 @@ main:has(.about) {
   border-radius: 17px;
 }
 
-.message {
+.message, .message-sent {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1041,7 +1041,7 @@ main:has(.about) {
   padding: 20px 10px;
   /* border: 1px solid #cccccca4; */
   background: #f9f9f980;
-  width: 300px;
+  width: 350px;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -1057,7 +1057,7 @@ main:has(.about) {
   }
 }
 
-.message::before{
+.message::before, .message-sent::before{
   content: "";
   position: absolute;
   top: 0; left: 0;
@@ -1069,7 +1069,7 @@ main:has(.about) {
   z-index: -1; /* Push behind content */
 }
 
-.message p {
+.message p, .message-sent p{
   margin-bottom: 15px;
   font-size: 36px;
 
@@ -1129,8 +1129,8 @@ main:has(.about) {
 
 @media (max-width: 500px) {
   .message{
-    width: 250px;
-    height: 120px;
+    width: 250px !important;
+    height: 120px !important;
   }
 }
 

@@ -216,3 +216,41 @@
   }
 
 }
+
+.message-sent{
+  background: #71ff2a;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 600px;
+  max-height: 110px;
+  height: 12vh;
+  width: 70vw;
+
+  box-shadow: 2px 2px 15px 8px rgb(100, 255, 61);
+
+}
+
+.message-sent::before{
+  background-color: rgba(70, 253, 165, 0.2); /* Optional translucent overlay */
+}
+
+.message-sent p{
+  padding-top: 1rem;
+  font-size: clamp(0.7rem, 1vw + 0.8rem, 2rem);
+
+    
+  font-family: "Agbalumo";
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .message-sent{
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+}
