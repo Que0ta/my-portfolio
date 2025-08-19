@@ -2,14 +2,15 @@ console.log(location.href);
 const messageSent = document.querySelector(".message-sent");
 
 messageSent.style.display = "none";
-function getCookie(name) {
+
+function getCookieStatus(name) {
   return document.cookie
     .split("; ")
     .find((row) => row.startsWith(name + "="))
     ?.split("=")[1];
 }
 
-const statusMessage = getCookie("formStatus");
+const statusMessage = getCookieStatus("formStatus");
 console.log(statusMessage);
 
 if (statusMessage === "success") {
