@@ -3,6 +3,14 @@ const messageSent = document.querySelector(".message-sent");
 
 messageSent.style.display = "none";
 
+// function createMessage(){
+//   const messageDiv = document.createElement('div');
+//   const messageTextDiv = document.createElement('p');
+//   messageTextDiv.innerHTML = "Thank you for your message. <br>I'll reply as soon as possible =) ";
+//   messageDiv.classList = 'message-sent';
+//   messageDiv.appendChild(messageTextDiv);
+// }
+
 function getCookieStatus(name) {
   return document.cookie
     .split("; ")
@@ -11,11 +19,10 @@ function getCookieStatus(name) {
 }
 
 const statusMessage = getCookieStatus("formStatus");
-console.log(statusMessage);
+// console.log(statusMessage);
 
 if (statusMessage === "success") {
   //   messageSent.style.display = "flex";
-  document.addEventListener("DOMContentLoaded", () => {
     const element = document.querySelector(".message-sent");
     if (window.innerWidth >= 900) {
       const animationKeyFrames1 = new KeyframeEffect(
@@ -77,5 +84,4 @@ if (statusMessage === "success") {
       const animation2 = new Animation(animationKeyFrames2, document.timeline);
       animation2.play();
     }
-  });
 }
