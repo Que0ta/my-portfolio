@@ -401,7 +401,7 @@ main {
   }
 
   main:has(.about) .about {
-    height: 70vh;
+    height: 55vh;
   }
 
   .containerito {
@@ -953,7 +953,7 @@ main:has(.about) {
   }
   
   main:has(.about) .text_lead {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .list-inside .lead {
@@ -968,6 +968,10 @@ main:has(.about) {
     border-radius: 1px;
     width: 60vw;
     height: 5px;
+  }
+
+  main:has(.about) .about{
+    height: 45vh;
   }
 }
 
